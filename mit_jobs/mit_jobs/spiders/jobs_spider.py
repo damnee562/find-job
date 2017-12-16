@@ -14,9 +14,6 @@ class JobsSpider(scrapy.Spider):
         yield scrapy.Request(url, self.parse)
 
     def parse(self, response):
-        with open('./url.txt', 'w') as f:
-            f.write(response.url + '\n')
-
         for href in response.css('div.job-item div.main-title-item a::attr(href)'):
             yield response.follow(href, self.parse_details)
 
