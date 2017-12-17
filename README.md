@@ -15,7 +15,7 @@ Clone this repository:
 
 Create virtualenv and install all requirements:
 
-    cd find-job
+    cd find-job/
     python3 -m venv venv_name
     source venv_name/bin/activate
     pip install -r requirements.txt
@@ -30,9 +30,9 @@ If it's not running, fire it up:
 
 Start crawling using scrapy:
 
-    cd inside_jobs
+    cd inside_jobs/
     # or
-    cd mit_jobs
+    cd mit_jobs/
     scrapy crawl jobs -a keyword=python # Replace 'python' to whatever keyword you want.
 
 It will create a new database named **jobs** in MongoDB, all found jobs will be stored into **inside_jobs** or **mit_jobs** collection.
