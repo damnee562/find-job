@@ -35,9 +35,20 @@ Start crawling using scrapy:
 
 It will create a new database named **jobs** in MongoDB, all found jobs will be stored into **inside_jobs** or **mit_jobs** collection.
 
+    # inside_jobs
     {
         "_id": ObjectId(),
         "category": Job type,
+        "salary": Salary range,
+        "name": Job title,
+        "location": Job location,
+        "company": Job company,
+        "url": Job link
+    }
+    
+    # mit_jobs
+    {
+        "_id": ObjectId(),
         "salary": Salary range,
         "name": Job title,
         "location": Job location,
