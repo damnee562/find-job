@@ -95,5 +95,5 @@ ITEM_PIPELINES = {
 
 MONGODB_SERVER = 'localhost'
 MONGODB_PORT = 27017
-MONGODB_DB = 'inside_jobs'
-MONGODB_COLLECTION = 'jobs'
+MONGODB_DB = 'jobs'
+MONGODB_COLLECTION = 'inside_jobs'

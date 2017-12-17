@@ -7,7 +7,6 @@
 
 import scrapy
 
-
 class InsideJobsItem(scrapy.Item):
     company = scrapy.Field()
     name = scrapy.Field()

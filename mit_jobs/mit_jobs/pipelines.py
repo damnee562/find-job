@@ -8,7 +8,6 @@
 import pymongo
 from scrapy.conf import settings
 
-
 class MitJobsPipeline(object):
     def process_item(self, item, spider):
         return item
