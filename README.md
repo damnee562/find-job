@@ -30,7 +30,9 @@ If it's not running, fire it up:
 
 Start crawling using scrapy:
 
-    cd inside_jobs # or cd mit_jobs
+    cd inside_jobs
+    # or
+    cd mit_jobs
     scrapy crawl jobs -a keyword=python # Replace 'python' to whatever keyword you want.
 
 It will create a new database named **jobs** in MongoDB, all found jobs will be stored into **inside_jobs** or **mit_jobs** collection.
