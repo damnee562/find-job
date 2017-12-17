@@ -8,7 +8,7 @@ A simple crawler to find jobs from several websites.
 * MongoDB
 
 ## Getting Started
-### Installtion
+### Installation
 Clone this repository:
 
     git clone git@github.com:damnee562/find-job.git
