@@ -48,3 +48,6 @@ It will create a new database named **find_job** in MongoDB, all found jobs will
 
 ## Built With
 * [Scrapy](https://scrapy.org/) - An open source and collaborative framework for extracting the data you need from websites.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
