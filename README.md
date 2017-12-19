@@ -39,10 +39,11 @@ It will create a new database named **find_job** in MongoDB, all found jobs will
     {
         "_id": ObjectId(),
         "name": Job's title,
-        "company": Offer's company,
         "location" Job's location,
+        "company": Offer's company,
         "salary": Salary range,
-        "url": Job link
+        "date": Post date,
+        "url": Link to post
     }
 
 ## Built With
