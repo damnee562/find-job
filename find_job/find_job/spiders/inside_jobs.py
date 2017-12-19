@@ -24,10 +24,11 @@ class InsideJobsSpider(scrapy.Spider):
 
     def parse_details(self, response):
         item = FindJobItem()
-        item['name'] = response.css('div.col-sm-8 h1::text').extract_first().strip()
         item['company'] = response.css('div.col-sm-9 div.panel-heading h1::text').extract_first().strip()
+        item['name'] = response.css('div.col-sm-8 h1::text').extract_first().strip()
         item['location'] = response.css('div.col-sm-8 p::text')[1].extract().split('：')[1].strip()
         item['salary'] = response.css('div.col-sm-8 p::text')[2].extract().split('：')[1].strip()
+        item['date'] = response.css('div.col-sm-8 p::text')[3].extract().split('：')[1].strip()
         item['url'] = response.url
 
         yield item

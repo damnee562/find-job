@@ -14,4 +14,5 @@ class FindJobItem(scrapy.Item):
     company = scrapy.Field()
     location = scrapy.Field()
     salary = scrapy.Field()
+    date = scrapy.Field()
     url = scrapy.Field()
