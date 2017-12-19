@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for inside_jobs project
+# Scrapy settings for find_job project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'inside_jobs'
+BOT_NAME = 'find_job'
 
-SPIDER_MODULES = ['inside_jobs.spiders']
-NEWSPIDER_MODULE = 'inside_jobs.spiders'
+SPIDER_MODULES = ['find_job.spiders']
+NEWSPIDER_MODULE = 'find_job.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'inside_jobs (+http://www.yourdomain.com)'
+#USER_AGENT = 'find_job (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'inside_jobs.middlewares.InsideJobsSpiderMiddleware': 543,
+#    'find_job.middlewares.FindJobSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'inside_jobs.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'find_job.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'inside_jobs.pipelines.InsideJobsPipeline': 300,
+#    'find_job.pipelines.FindJobPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -90,10 +90,10 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 ITEM_PIPELINES = {
-    'inside_jobs.pipelines.MongoDBPipeline': 100
+    'find_job.pipelines.MongoDBPipeline': 100
 }
 
 MONGODB_SERVER = 'localhost'
 MONGODB_PORT = 27017
-MONGODB_DB = 'jobs'
-MONGODB_COLLECTION = 'inside_jobs'
+MONGODB_DB = 'find_job'
+MONGODB_COLLECTION = 'jobs'

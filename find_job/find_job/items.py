@@ -7,10 +7,11 @@
 
 import scrapy
 
-class InsideJobsItem(scrapy.Item):
-    company = scrapy.Field()
+class FindJobItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
     name = scrapy.Field()
-    category = scrapy.Field()
+    company = scrapy.Field()
     location = scrapy.Field()
     salary = scrapy.Field()
     url = scrapy.Field()

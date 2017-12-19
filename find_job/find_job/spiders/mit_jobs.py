@@ -1,9 +1,9 @@
 import scrapy
 
-from mit_jobs.items import MitJobsItem
+from find_job.items import FindJobItem
 
-class JobsSpider(scrapy.Spider):
-    name = 'jobs'
+class MitJobsSpider(scrapy.Spider):
+    name = 'mit_jobs'
 
     def start_requests(self):
         url = 'https://mit.jobs/'
@@ -23,11 +23,11 @@ class JobsSpider(scrapy.Spider):
             yield scrapy.Request(next_page, self.parse)
 
     def parse_details(self, response):
-        item = MitJobsItem()
+        item = FindJobItem()
         item['name'] = response.css('div.page-header-main h1 a::text').extract_first().strip(),
         item['company'] = response.css('div.page-header-main h2 a::text').extract_first() or response.css('div.page-header-main h2::text').extract_first().strip(),
-        item['salary'] = response.css('section.jobDetailInfo div.jobPayroll::text').extract_first().strip() + response.css('section.jobDetailInfo div.jobPayroll span::text').extract_first().strip(),
         item['location'] = response.css('section.jobDetailInfo div.jobLocation').extract_first().split('</i> ')[1].split('\n')[0],
+        item['salary'] = response.css('section.jobDetailInfo div.jobPayroll::text').extract_first().strip() + response.css('section.jobDetailInfo div.jobPayroll span::text').extract_first().strip(),
         item['url'] = response.url
 
         yield item

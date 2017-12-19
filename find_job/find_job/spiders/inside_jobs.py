@@ -1,9 +1,9 @@
 import scrapy
 
-from inside_jobs.items import InsideJobsItem
+from find_job.items import FindJobItem
 
-class JobsSpider(scrapy.Spider):
-    name = 'jobs'
+class InsideJobsSpider(scrapy.Spider):
+    name = 'inside_jobs'
 
     def start_requests(self):
         url = 'https://jobs.inside.com.tw'
@@ -23,10 +23,9 @@ class JobsSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
     def parse_details(self, response):
-        item = InsideJobsItem()
-        item['company'] = response.css('div.col-sm-9 div.panel-heading h1::text').extract_first().strip()
+        item = FindJobItem()
         item['name'] = response.css('div.col-sm-8 h1::text').extract_first().strip()
-        item['category'] = response.css('div.col-sm-8 p::text').extract_first().split('：')[1].strip()
+        item['company'] = response.css('div.col-sm-9 div.panel-heading h1::text').extract_first().strip()
         item['location'] = response.css('div.col-sm-8 p::text')[1].extract().split('：')[1].strip()
         item['salary'] = response.css('div.col-sm-8 p::text')[2].extract().split('：')[1].strip()
         item['url'] = response.url

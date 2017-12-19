@@ -8,7 +8,7 @@
 import pymongo
 from scrapy.conf import settings
 
-class InsideJobsPipeline(object):
+class FindJobPipeline(object):
     def process_item(self, item, spider):
         return item
 
