@@ -46,7 +46,7 @@ It will create a new database named **find_job** in MongoDB, all found jobs will
         "url": Link to post
     }
 
-Export data in JSON format
+Export data in JSON format:
 
     mongoexport -d find_job -c jobs -o jobs.json
 
@@ -56,4 +56,4 @@ See [Official docs](https://docs.mongodb.com/manual/reference/program/mongoexpor
 * [Scrapy](https://scrapy.org/) - An open source and collaborative framework for extracting the data you need from websites.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
