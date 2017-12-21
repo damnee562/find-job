@@ -11,7 +11,7 @@ A simple crawler to find jobs from several websites.
 ### Installation
 Clone this repository:
 
-    git clone git@github.com:damnee562/find-job.git
+    git clone https://github.com/damnee562/find-job.git
 
 Create virtualenv and install all requirements:
 
@@ -46,9 +46,9 @@ It will create a new database named **find_job** in MongoDB, all found jobs will
         "url": Link to post
     }
 
-Export data in JSON format:
+Export data in CSV format:
 
-    mongoexport -d find_job -c jobs -o jobs.json
+    mongoexport -d find_job -c jobs --type=csv --fields name,company,location,salary,date,url -o jobs.csv
 
 See [Official docs](https://docs.mongodb.com/manual/reference/program/mongoexport/) for more export usage.
 
